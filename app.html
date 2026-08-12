@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bible School Schedules</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Bible School">
+<meta name="theme-color" content="#2E5C8A">
+<style>
+  :root {
+    --navy: #2E5C8A;
+    --navy-dark: #1D3F63;
+    --navy-light: #D3E3F4;
+    --amber-container: #FFE8B8;
+    --on-amber: #3D2A00;
+    --bg: #FBFAF8;
+    --surface-variant: #ECEAE6;
+    --on-surface: #1A1A18;
+    --on-surface-variant: #4A4842;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #9FC6EE;
+      --navy-dark: #D3E3F4;
+      --navy-light: #25486C;
+      --amber-container: #574200;
+      --on-amber: #FFE8B8;
+      --bg: #14130F;
+      --surface-variant: #2A2925;
+      --on-surface: #F2F0EA;
+      --on-surface-variant: #CAC7BC;
+    }
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--on-surface); }
+  body {
+    font: 16px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  header { padding: 12px 20px 4px; }
+  .school { color: var(--navy); font-size: 14px; font-weight: 600; }
+  .daytitle { font-size: 24px; font-weight: 700; margin-top: 2px; display: flex; align-items: baseline; gap: 10px; }
+  .daytitle h1 { font-size: inherit; font-weight: inherit; margin: 0; flex: 1; }
+  .today-btn {
+    background: none; border: 0; color: var(--navy); font: inherit; font-size: 15px;
+    font-weight: 600; cursor: pointer; padding: 4px 6px;
+  }
+  nav.days { display: flex; gap: 8px; overflow-x: auto; padding: 8px 16px; scrollbar-width: none; }
+  nav.days::-webkit-scrollbar { display: none; }
+  .daychip {
+    flex: 0 0 auto; border: 0; border-radius: 14px; padding: 8px 14px; cursor: pointer;
+    background: var(--surface-variant); color: var(--on-surface-variant);
+    font: inherit; text-align: center; line-height: 1.15;
+  }
+  .daychip .dow { display: block; font-size: 12px; font-weight: 500; }
+  .daychip .dom { display: block; font-size: 17px; font-weight: 700; }
+  .daychip[aria-current="page"] { background: var(--navy); color: #fff; }
+  @media (prefers-color-scheme: dark) { .daychip[aria-current="page"] { color: #11314F; } }
+  .daychip.is-today:not([aria-current="page"]) { box-shadow: inset 0 0 0 2px var(--navy); }
+  .banner {
+    margin: 4px 16px; padding: 10px 14px; border-radius: 10px;
+    background: var(--amber-container); color: var(--on-amber); font-size: 15px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .banner button { background: none; border: 0; color: inherit; font-size: 17px; cursor: pointer; padding: 0 4px; }
+  .credits { padding: 6px 20px; border-bottom: 1px solid var(--surface-variant); margin-bottom: 6px; }
+  .credits.inline { padding-top: 12px; padding-bottom: 12px; }
+  .credit { display: flex; gap: 8px; padding: 2px 0; color: var(--on-surface-variant); font-size: 15px; }
+  .credit .role { font-weight: 600; }
+  main { padding-bottom: 48px; }
+  .block { margin: 0 12px; padding: 6px 8px; border-radius: 12px; }
+  .block.highlight { margin: 4px 12px; padding: 10px 8px; }
+  .block.inProgress { background: var(--navy-light); }
+  .block.upNext { background: var(--amber-container); }
+  .flag { display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; padding: 0 8px 6px; }
+  .block.inProgress .flag { color: var(--navy-dark); }
+  .block.upNext .flag { color: var(--on-amber); }
+  .grouphead { display: flex; padding: 0 8px 4px; font-size: 15px; font-weight: 600; }
+  .grouphead .t { width: 82px; flex: 0 0 82px; }
+  .ev { display: flex; align-items: flex-start; padding: 8px; border-radius: 8px; cursor: pointer; }
+  .ev.past { opacity: .45; }
+  .ev .t { width: 82px; flex: 0 0 82px; font-size: 15px; font-weight: 500; color: var(--on-surface-variant); }
+  .ev .dot { width: 6px; height: 6px; border-radius: 3px; margin: 7px 10px 0 0; flex: 0 0 6px; }
+  .ev .body { flex: 1; min-width: 0; }
+  .ev .headline { font-weight: 600; }
+  .ev .sub, .ev .desc { color: var(--on-surface-variant); font-size: 15px; }
+  .ev .item { color: var(--on-surface-variant); font-size: 13px; padding: 3px 0 0 10px; }
+  .member { padding-left: 14px; }
+  .endnote { text-align: center; color: var(--on-surface-variant); font-size: 15px; padding: 24px; }
+  .state { padding: 32px; text-align: center; }
+  dialog {
+    border: 0; border-radius: 16px 16px 0 0; padding: 24px 24px 40px; width: 100%; max-width: 640px;
+    background: var(--bg); color: var(--on-surface);
+    margin-top: auto; margin-bottom: 0;
+  }
+  dialog::backdrop { background: rgba(0,0,0,.4); }
+  dialog .when { color: var(--navy); font-weight: 700; font-size: 15px; }
+  dialog h2 { margin: 6px 0 0; font-size: 22px; }
+  dialog hr { border: 0; border-top: 1px solid var(--surface-variant); margin: 14px 0; }
+  dialog .close { margin-top: 20px; width: 100%; padding: 12px; border: 0; border-radius: 10px;
+    background: var(--navy); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+  @media (prefers-color-scheme: dark) { dialog .close { color: #11314F; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="school" id="schoolName"></div>
+  <div class="daytitle"><h1 id="dayTitle"></h1><button class="today-btn" id="todayBtn" hidden>Today</button></div>
+</header>
+<nav class="days" id="daySelector" aria-label="Choose a day"></nav>
+<div id="banners"></div>
+<main id="main"></main>
+<dialog id="detail"></dialog>
+
+<script type="module">
+import * as E from './engine.js';
+
+const el = (id) => document.getElementById(id);
+let school = null;
+let selectedDayId = null;
+let bannerDismissed = false;
+
+const CATEGORY_COLORS = {
+  class: ['#2E5C8A', '#9FC6EE'],
+  worship: ['#6750A4', '#C5B3E8'],
+  meal: ['#3F6B37', '#A8D6A0'],
+  recreation: ['#12665F', '#7FCFC8'],
+  youth: ['#8A6100', '#EBC069'],
+  logistics: ['#6E6C64', '#9E9C94'],
+};
+const isDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+const categoryColor = (c) => (CATEGORY_COLORS[c] ? CATEGORY_COLORS[c][isDark() ? 1 : 0] : null);
+
+const text = (tag, cls, str) => {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (str != null) n.textContent = str;
+  return n;
+};
+
+function prettyDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
+  if (!m) return iso;
+  const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+
+async function boot() {
+  try {
+    school = await (await fetch('./school.json', { cache: 'no-cache' })).json();
+  } catch {
+    // Offline with no cached copy yet.
+    el('main').append(text('div', 'state', 'Could not load the schedule. Open this page once while online.'));
+    return;
+  }
+  selectedDayId = (E.defaultDay(school) || {}).id || null;
+  el('schoolName').textContent = school.name;
+  render();
+
+  // Minute-aligned tick, so the highlight flips on the second rather than up to 60s late.
+  const align = () => {
+    const p = E.schoolParts(school);
+    setTimeout(() => { render(); setInterval(render, 60000); }, Math.max(1, 60 - p.second) * 1000);
+  };
+  align();
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
+}
+
+function render() {
+  const now = new Date();
+  const lifecycle = E.lifecycleOf(school, now);
+  const todayDay = (school.days || []).find((d) => E.isoDateOrdinal(d.date) === E.todayOrdinal(school, now));
+
+  if (!selectedDayId) selectedDayId = (E.defaultDay(school, now) || {}).id;
+  const day = (school.days || []).find((d) => d.id === selectedDayId);
+
+  el('dayTitle').textContent = day ? `${day.label}, ${prettyDate(day.date)}` : '';
+  const todayBtn = el('todayBtn');
+  todayBtn.hidden = !todayDay || selectedDayId === todayDay.id;
+  todayBtn.onclick = () => { selectedDayId = todayDay.id; render(); };
+
+  renderDaySelector(todayDay);
+  renderBanners(lifecycle);
+
+  const main = el('main');
+  main.replaceChildren();
+
+  if (lifecycle === 'preSchool') {
+    const box = text('div', 'state');
+    box.append(text('h2', null, school.name));
+    box.append(text('p', null, "Bible School hasn't started yet"));
+    box.append(text('p', null, `${prettyDate(school.startDate)} – ${prettyDate(school.endDate)}`));
+    if (school.contactNote) box.append(text('p', null, school.contactNote));
+    main.append(box);
+    return;
+  }
+  if (!day) return;
+
+  const nowMinute = E.minuteOfDayNow(school, now);
+  const isToday = todayDay && day.id === todayDay.id;
+  const live = isToday && lifecycle === 'live' ? E.computeLiveState(day, nowMinute) : E.EMPTY_LIVE;
+  const { header, sections } = E.buildSections(day);
+
+  if (header.length) main.append(creditsNode(header, false));
+
+  let firstHighlight = null;
+  for (const section of sections) {
+    if (section.type === 'note') {
+      main.append(bannerNode(section.text, null));
+    } else if (section.type === 'credits') {
+      main.append(creditsNode([section.block], true));
+    } else {
+      const status = E.statusOf(live, section.block, nowMinute);
+      const node = blockNode(section.block, status, live.minutesUntilUpNext);
+      if (!firstHighlight && (status === 'inProgress' || status === 'upNext')) firstHighlight = node;
+      main.append(node);
+    }
+  }
+
+  if (live.dayIsOver && isToday) {
+    main.append(text('div', 'endnote', "That's the end of today's schedule."));
+  }
+
+  // Scroll the earliest highlighted block into view, once per render pass.
+  if (firstHighlight && !window.__cbssaScrolled) {
+    window.__cbssaScrolled = true;
+    requestAnimationFrame(() => firstHighlight.scrollIntoView({ block: 'center', behavior: 'smooth' }));
+  }
+}
+
+function renderDaySelector(todayDay) {
+  const nav = el('daySelector');
+  nav.replaceChildren();
+  for (const d of school.days || []) {
+    const b = document.createElement('button');
+    b.className = 'daychip' + (todayDay && d.id === todayDay.id ? ' is-today' : '');
+    if (d.id === selectedDayId) b.setAttribute('aria-current', 'page');
+    b.append(text('span', 'dow', d.label.slice(0, 3)));
+    b.append(text('span', 'dom', String(parseInt(d.date.slice(8, 10), 10))));
+    b.onclick = () => { selectedDayId = d.id; window.__cbssaScrolled = false; render(); };
+    nav.append(b);
+  }
+}
+
+function renderBanners(lifecycle) {
+  const box = el('banners');
+  box.replaceChildren();
+  if (!bannerDismissed && E.deviceZoneDiffers(school)) {
+    box.append(bannerNode(`All times shown in ${E.zoneLabel(school)} time`, () => {
+      bannerDismissed = true;
+      render();
+    }));
+  }
+  if (lifecycle === 'archived') box.append(bannerNode('This Bible School has ended', null));
+}
+
+function bannerNode(str, onDismiss) {
+  const n = text('div', 'banner');
+  n.append(text('span', null, str));
+  if (onDismiss) {
+    const b = text('button', null, '×');
+    b.setAttribute('aria-label', 'Dismiss');
+    b.onclick = onDismiss;
+    n.append(b);
+  }
+  return n;
+}
+
+function creditsNode(blocks, inline) {
+  const n = text('div', 'credits' + (inline ? ' inline' : ''));
+  for (const block of blocks) {
+    const credits = (block.credits || []).slice().sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+    for (const c of credits) {
+      const row = text('div', 'credit');
+      if (c.role) row.append(text('span', 'role', c.role));
+      if (c.value) row.append(text('span', null, c.value));
+      n.append(row);
+    }
+  }
+  return n;
+}
+
+function blockNode(block, status, minutesUntil) {
+  const highlighted = status === 'inProgress' || status === 'upNext';
+  const n = text('div', 'block ' + status + (highlighted ? ' highlight' : ''));
+
+  if (highlighted) {
+    const flag = text('div', 'flag');
+    flag.append(text('span', null, status === 'inProgress' ? '▶' : '◷'));
+    flag.append(text('span', null,
+      status === 'inProgress'
+        ? 'In progress'
+        : E.joinPresent(['Up next', minutesUntil != null ? E.humanCountdown(minutesUntil) : null])));
+    n.append(flag);
+  }
+
+  if (block.kind === 'single') {
+    n.append(eventNode(block.event, status === 'past', true));
+  } else {
+    const head = text('div', 'grouphead');
+    head.append(text('span', 't', E.formatTime(block.startMinute)));
+    head.append(text('span', null,
+      E.joinPresent([block.group.title, `${block.members.length} at the same time`])));
+    n.append(head);
+    for (const m of block.members) {
+      const row = eventNode(m, status === 'past', false);
+      row.classList.add('member');
+      n.append(row);
+    }
+  }
+  return n;
+}
+
+function eventNode(event, dim, showTime) {
+  const n = text('div', 'ev' + (dim ? ' past' : ''));
+
+  if (showTime) {
+    n.append(text('span', 't', E.formatTime(E.minuteOfDay(event.startTime))));
+  } else {
+    // Members of a parallel group inherit the group's time, so they get a narrow spacer
+    // instead of a repeated clock value.
+    const spacer = text('span', null, '');
+    spacer.style.flex = '0 0 6px';
+    n.append(spacer);
+  }
+
+  const colour = categoryColor(event.category);
+  if (colour) {
+    const dot = text('span', 'dot');
+    dot.style.background = colour;
+    n.append(dot);
+  }
+
+  const body = text('div', 'body');
+  // Inside a parallel group the track names the stream ("Choir"), but the booklet also titles
+  // that event "Choir" — printing both gives "Choir · Choir". Only prefix when it adds something.
+  const headline = E.eventHeadline(event);
+  const track = !showTime && event.track && event.track.toLowerCase() !== headline.toLowerCase()
+    ? event.track : null;
+  body.append(text('div', 'headline', E.joinPresent([track, headline])));
+
+  const sub = E.eventSubtitle(event);
+  if (sub) body.append(text('div', 'sub', sub));
+  if (event.description) body.append(text('div', 'desc', event.description));
+  for (const item of (event.items || []).slice().sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))) {
+    const line = E.itemLine(item.label, item.detail, item.person);
+    if (line) body.append(text('div', 'item', line));
+  }
+  n.append(body);
+  n.onclick = () => openDetail(event);
+  return n;
+}
+
+function openDetail(event) {
+  const d = el('detail');
+  d.replaceChildren();
+  d.append(text('div', 'when',
+    E.formatTime(E.minuteOfDay(event.startTime)) +
+    (event.endTime ? ' – ' + E.formatTime(E.minuteOfDay(event.endTime)) : '')));
+  d.append(text('h2', null, E.eventHeadline(event)));
+  const sub = E.eventSubtitle(event);
+  if (sub) d.append(text('p', null, sub));
+  if (event.description) d.append(text('p', null, event.description));
+  const items = (event.items || []).slice().sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0));
+  if (items.length) {
+    d.append(document.createElement('hr'));
+    for (const item of items) {
+      const line = E.itemLine(item.label, item.detail, item.person);
+      if (line) d.append(text('p', null, line));
+    }
+  }
+  const close = text('button', 'close', 'Close');
+  close.onclick = () => d.close();
+  d.append(close);
+  d.showModal();
+}
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
+boot();
+</script>
+</body>
+</html>

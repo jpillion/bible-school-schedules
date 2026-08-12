@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bible School Schedules — install</title>
+<meta name="description" content="The Whatshan Lake Bible School 2026 programme on your phone. Works with no signal.">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<meta name="theme-color" content="#2E5C8A">
+<style>
+  :root {
+    --navy: #2E5C8A; --navy-light: #D3E3F4; --amber: #FFE8B8; --on-amber: #3D2A00;
+    --bg: #FBFAF8; --card: #fff; --line: #E4E1DB;
+    --fg: #1A1A18; --muted: #5A5850;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --navy: #9FC6EE; --navy-light: #25486C; --amber: #574200; --on-amber: #FFE8B8;
+      --bg: #14130F; --card: #1E1D19; --line: #35332C;
+      --fg: #F2F0EA; --muted: #B5B2A8;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 72px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  header img { width: 68px; height: 68px; border-radius: 15px; }
+  h1 { font-size: 27px; margin: 0; line-height: 1.15; }
+  .sub { color: var(--muted); margin: 2px 0 0; }
+  .lede { color: var(--muted); margin: 20px 0 28px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 20px 22px; margin-bottom: 18px;
+  }
+  h2 { font-size: 20px; margin: 0 0 4px; display: flex; align-items: center; gap: 9px; }
+  h2 .tag {
+    font-size: 12px; font-weight: 600; letter-spacing: .03em; text-transform: uppercase;
+    background: var(--navy-light); color: var(--navy); padding: 3px 8px; border-radius: 6px;
+  }
+  @media (prefers-color-scheme: dark) { h2 .tag { color: var(--amber-on, #D3E3F4); } }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p { margin: 8px 0; }
+  ol, ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: var(--navy); }
+  .btn {
+    display: inline-block; background: var(--navy); color: #fff; text-decoration: none;
+    font-weight: 600; padding: 13px 22px; border-radius: 11px; margin: 12px 8px 4px 0;
+  }
+  @media (prefers-color-scheme: dark) { .btn { color: #11314F; } }
+  .btn.secondary { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+  .note {
+    background: var(--amber); color: var(--on-amber); border-radius: 10px;
+    padding: 12px 15px; margin: 14px 0; font-size: 15.5px;
+  }
+  .meta { color: var(--muted); font-size: 14.5px; }
+  footer { color: var(--muted); font-size: 14.5px; margin-top: 34px; text-align: center; }
+  code { background: var(--navy-light); color: var(--fg); padding: 1px 6px; border-radius: 5px; font-size: 14.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img src="./icon-512.png" alt="">
+    <div>
+      <h1>Bible School Schedules</h1>
+      <p class="sub">Whatshan Lake Bible School — 2026</p>
+    </div>
+  </header>
+
+  <p class="lede">
+    The whole week's programme on your phone: every class, meal, activity and evening
+    programme, with the speakers and the readings. It highlights what is on right now and
+    what is next, and it works with no signal at all.
+  </p>
+
+  <section>
+    <h2>iPhone &amp; iPad <span class="tag">Recommended</span></h2>
+    <p>Open this page on your iPhone and add the app to your Home Screen. No App Store, no
+      account, nothing to download.</p>
+
+    <a class="btn" href="./app.html">Open the schedule</a>
+
+    <h3>To keep it on your Home Screen</h3>
+    <ol>
+      <li>Tap <strong>Open the schedule</strong> above.</li>
+      <li>Tap the <strong>Share</strong> button — the square with an arrow, at the bottom of Safari.</li>
+      <li>Scroll down and tap <strong>Add to Home Screen</strong>, then <strong>Add</strong>.</li>
+    </ol>
+    <p class="meta">It then opens full-screen with its own icon, just like an App Store app, and
+      the whole schedule is stored on your phone so it works in the valley with no bars.</p>
+    <div class="note">
+      Do this once <strong>while you still have a signal</strong> — the first visit is what
+      saves the schedule to your phone. After that it works offline.
+    </div>
+  </section>
+
+  <section>
+    <h2>Android</h2>
+    <p>The Play Store listing is being reviewed. Until it is live, install the app directly:</p>
+    <a class="btn" href="./downloads/BibleSchoolSchedules-1.0.0.apk">Download the app (APK)</a>
+    <p class="meta">Android will ask you to allow installing from your browser — that is normal for
+      an app that has not come from the Play Store. Tap the downloaded file, allow the prompt,
+      and install.</p>
+    <p class="meta">The Add-to-Home-Screen web version above works on Android too, if you would
+      rather not install anything.</p>
+  </section>
+
+  <section>
+    <h2>Native iPhone app <span class="tag">Not yet</span></h2>
+    <p>There is a real, finished SwiftUI iPhone app — it just cannot be handed out yet.</p>
+    <p>Apple only allows an app onto an ordinary iPhone through the App Store, TestFlight, or an
+      ad-hoc profile, and <strong>all three require a paid Apple Developer Program membership</strong>.
+      Until that membership is approved there is no link that installs a native app straight
+      onto a phone. That is Apple's rule, not a missing step here.</p>
+    <p>The unsigned build is published anyway, for anyone who wants to sideload it from a
+      computer using a tool such as AltStore or Sideloadly and their own free Apple ID:</p>
+    <a class="btn secondary" href="./downloads/BibleSchoolSchedules-1.0.0-unsigned.ipa">Unsigned .ipa</a>
+    <p class="meta">Sideloaded apps signed with a free Apple ID stop working after 7 days and must
+      be re-installed. This is a developer convenience, not something to hand to the school.
+      <strong>Use the Home Screen version above instead.</strong></p>
+  </section>
+
+  <footer>
+    <p><a href="./privacy.html">Privacy</a></p>
+    <p>No accounts, no adverts, no tracking. Nothing you do in this app leaves your phone.</p>
+  </footer>
+
+</div>
+</body>
+</html>

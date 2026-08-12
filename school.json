@@ -1,0 +1,328 @@
+{
+  "_comment": [
+    "THE REAL SCHOOL, COMPLETE — all 8 days, Aug 8-15 2026, transcribed from booklet pages 9-16.",
+    "This supersedes sample-school.json (which held only 3 of the 8 days).",
+    "name, location and timeZone were confirmed by the owner on 2026-08-12: Whatshan Lake is in",
+    "the West Kootenay region of British Columbia, which observes Pacific time — America/Vancouver.",
+    "The 6 morning classes per speaker are the three week-long series. On Sunday they are",
+    "distributed across the day's meetings rather than run back-to-back: Lewis at 8:30,",
+    "Hodge as the Memorial Meeting exhort, Whitehouse as the Evening Class. Mon-Fri they",
+    "run as three consecutive morning slots. Each series therefore has exactly 6 classes",
+    "across 8 days, which is why installment number never equals day index (PRD 4.7)."
+  ],
+  "id": "school-2026",
+  "name": "Whatshan Lake Bible School - 2026",
+  "year": 2026,
+  "location": "Whatshan Lake, British Columbia",
+  "timeZone": "America/Vancouver",
+  "startDate": "2026-08-08",
+  "endDate": "2026-08-15",
+  "previewOpensAt": "2026-08-08",
+  "visibility": "listed",
+  "themeColor": "#2E5C8A",
+  "contactNote": "Your access code is printed in your booklet.",
+  "contentVersion": 1,
+  "publishedAt": "2026-08-01T12:00:00Z",
+
+  "series": [
+    { "id": "s-lewis",      "title": "Jehu - Driving Furiously for God",                                 "speaker": "Bro. Nathan Lewis",       "sortOrder": 0 },
+    { "id": "s-hodge",      "title": "The Letters to the Seven Ecclesias - Messages not to be Missed!",  "speaker": "Bro. Ted Hodge",          "sortOrder": 1 },
+    { "id": "s-whitehouse", "title": "Nehemiah: Rise up together",                                       "speaker": "Bro. Stephen Whitehouse", "sortOrder": 2 }
+  ],
+
+  "days": [
+    {
+      "id": "d0808", "date": "2026-08-08", "label": "Saturday",
+      "creditBlocks": [ { "id": "cb0808", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Tim Osborn",   "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Sis. Eliyah Jones", "sortOrder": 1 } ] } ],
+      "groups": [],
+      "events": [
+        { "id": "e0808-1400", "startTime": "14:00", "title": "Registration", "category": "logistics", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0808-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 1,
+          "items": [ { "id": "i0808-1", "label": "Thanks", "person": "Bro. Mike Derbyshire", "sortOrder": 0 } ] },
+        { "id": "e0808-1930", "startTime": "19:30", "title": "Welcome Meeting", "category": "worship", "notifiable": true, "sortOrder": 2,
+          "items": [
+            { "id": "i0808-2", "label": "Hymn", "detail": "118, then Prayer", "sortOrder": 0 },
+            { "id": "i0808-3", "label": "Reading", "detail": "Mark 3", "person": "Bro. Matthias Jones", "sortOrder": 1 },
+            { "id": "i0808-4", "label": "Welcome Address", "sortOrder": 2 },
+            { "id": "i0808-5", "label": "Series Intro", "detail": "Jehu - Driving Furiously for God", "person": "Bro. Nathan Lewis", "seriesId": "s-lewis", "sortOrder": 3 },
+            { "id": "i0808-6", "label": "Series Intro", "detail": "The Letters to the Seven Ecclesias - Messages not to be Missed!", "person": "Bro. Ted Hodge", "seriesId": "s-hodge", "sortOrder": 4 },
+            { "id": "i0808-7", "label": "Series Intro", "detail": "Nehemiah: Rise up together", "person": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "sortOrder": 5 },
+            { "id": "i0808-8", "label": "Hymn", "detail": "383, then Closing Prayer", "person": "Bro. Jacob Robinson", "sortOrder": 6 } ] },
+        { "id": "e0808-2100", "startTime": "21:00", "title": "Teen Activities — Icebreakers", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 3 },
+        { "id": "e0808-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0808-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 5 }
+      ]
+    },
+
+    {
+      "id": "d0809", "date": "2026-08-09", "label": "Sunday",
+      "creditBlocks": [ { "id": "cb0809", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Dave Styles AM / Bro. Darrel Wiens PM",       "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Sis. Martha Robinson AM / Sis. Carmel Robinson PM", "sortOrder": 1 } ] } ],
+      "groups": [],
+      "events": [
+        { "id": "e0809-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0809-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0809-1", "label": "Hymn", "detail": "266, then Prayer", "sortOrder": 0 },
+            { "id": "i0809-2", "label": "Reading", "detail": "2 Kings 9v1-13", "person": "Bro. Silas Bartholomew", "sortOrder": 1 },
+            { "id": "i0809-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0809-0830", "startTime": "08:30", "label": "Class 1", "title": "THE CHARIOT - The Ghost of Naboth", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0809-0930", "startTime": "09:30", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0809-1000", "startTime": "10:00", "title": "Memorial Meeting", "category": "worship", "notifiable": true, "sortOrder": 4,
+          "items": [
+            { "id": "i0809-4",  "label": "Hymn", "detail": "99", "sortOrder": 0 },
+            { "id": "i0809-5",  "label": "Reading", "detail": "1 Kings 3", "person": "Bro. Nathan Ditto", "sortOrder": 1 },
+            { "id": "i0809-6",  "label": "Reading", "detail": "Revelation 2-3", "person": "Bro. Sam Robinson", "sortOrder": 2 },
+            { "id": "i0809-7",  "detail": "Announcements, then Collection", "sortOrder": 3 },
+            { "id": "i0809-8",  "label": "Prayer", "person": "Bro. Jason Sargent", "sortOrder": 4 },
+            { "id": "i0809-9",  "label": "Hymn", "detail": "355", "sortOrder": 5 },
+            { "id": "i0809-10", "label": "Exhort, Class 1", "detail": "\"The place\"", "person": "Bro. Ted Hodge", "seriesId": "s-hodge", "sortOrder": 6 },
+            { "id": "i0809-11", "label": "Hymn", "detail": "244", "sortOrder": 7 },
+            { "id": "i0809-12", "label": "Thanks for Bread", "person": "Bro. Mike Making", "sortOrder": 8 },
+            { "id": "i0809-13", "label": "Thanks for Cup", "person": "Bro. Tim Cooper", "sortOrder": 9 },
+            { "id": "i0809-14", "label": "Hymn", "detail": "427, then Closing Prayer", "person": "Bro. Andrew Jackson", "sortOrder": 10 } ] },
+        { "id": "e0809-1130", "startTime": "11:30", "title": "Bible School Photo", "category": "logistics", "notifiable": true, "sortOrder": 5 },
+        { "id": "e0809-1200", "startTime": "12:00", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0809-15", "label": "Thanks", "person": "Bro. Jesse Fletcher", "sortOrder": 0 } ] },
+        { "id": "e0809-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 7 },
+        { "id": "e0809-1400", "startTime": "14:00", "title": "Activities", "category": "recreation", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0809-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0809-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0809", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0809-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0809", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0809-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 11,
+          "items": [ { "id": "i0809-16", "label": "Thanks", "person": "Bro. Nahum Billington", "sortOrder": 0 } ] },
+        { "id": "e0809-1900", "startTime": "19:00", "title": "Evening Class", "category": "worship", "notifiable": true, "sortOrder": 12,
+          "items": [
+            { "id": "i0809-17", "label": "Hymn", "detail": "341, then Prayer", "sortOrder": 0 },
+            { "id": "i0809-18", "label": "Reading", "detail": "Nehemiah 1", "person": "Bro. Jonah Bleichner", "sortOrder": 1 },
+            { "id": "i0809-19", "label": "Class", "detail": "When the ruins break your heart", "person": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "sortOrder": 2 },
+            { "id": "i0809-20", "label": "Hymn", "detail": "411, then Closing Prayer", "person": "Bro. Tim Sargent", "sortOrder": 3 } ] },
+        { "id": "e0809-2030", "startTime": "20:30", "title": "Fruit Social", "category": "recreation", "notifiable": true, "sortOrder": 13 },
+        { "id": "e0809-2100", "startTime": "21:00", "title": "Teen Activities — Science Night", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 14 },
+        { "id": "e0809-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0809-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 16 }
+      ],
+      "groups": [ { "id": "g0809", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ]
+    },
+
+    {
+      "id": "d0810", "date": "2026-08-10", "label": "Monday",
+      "creditBlocks": [ { "id": "cb0810", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Chris Winter AM / Bro. Gregg Ferrie PM",      "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Sis. Sarah Osborn AM / Bro. Nathanael Massey PM",  "sortOrder": 1 } ] } ],
+      "groups": [ { "id": "g0810", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ],
+      "events": [
+        { "id": "e0810-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0810-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0810-1", "label": "Hymn", "detail": "402, then Prayer", "sortOrder": 0 },
+            { "id": "i0810-2", "label": "Reading", "detail": "2 Kings 9v14-29", "person": "Bro. Steven Hyndman", "sortOrder": 1 },
+            { "id": "i0810-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0810-0830", "startTime": "08:30", "label": "Class 2", "title": "THE BOW - The Arrows of Death", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0810-0925", "startTime": "09:25", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0810-0950", "startTime": "09:50", "label": "Class 2", "title": "Persecution and Pressure", "speaker": "Bro. Ted Hodge", "seriesId": "s-hodge", "category": "class", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0810-1045", "startTime": "10:45", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 5 },
+        { "id": "e0810-1115", "startTime": "11:15", "label": "Class 2", "title": "Stay on the wall", "speaker": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "category": "class", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0810-4", "label": "Hymn", "detail": "403, then Closing Prayer", "person": "Bro. Paul Osborn", "sortOrder": 0 } ] },
+        { "id": "e0810-1230", "startTime": "12:30", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 7,
+          "items": [ { "id": "i0810-5", "label": "Thanks", "person": "Bro. Andrew Jackson", "sortOrder": 0 } ] },
+        { "id": "e0810-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0810-1400", "startTime": "14:00", "title": "Activities", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0810-1400b", "startTime": "14:00", "title": "Sisters' Tea", "speaker": "Ted Hodge", "description": "Bible-based Problem Solving", "audience": "Sisters", "category": "other", "notifiable": true, "sortOrder": 10 },
+        { "id": "e0810-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 11 },
+        { "id": "e0810-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0810", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0810-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0810", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0810-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 13,
+          "items": [ { "id": "i0810-6", "label": "Thanks", "person": "Bro. Mark Bartholomew", "sortOrder": 0 } ] },
+        { "id": "e0810-1900", "startTime": "19:00", "title": "Evening Program", "category": "worship", "notifiable": true, "sortOrder": 14,
+          "items": [
+            { "id": "i0810-7",  "label": "Hymn", "detail": "60, then Prayer", "sortOrder": 0 },
+            { "id": "i0810-8",  "label": "Reading", "detail": "Daniel 10", "person": "Bro. Joseph Osborn", "sortOrder": 1 },
+            { "id": "i0810-9",  "label": "Class", "detail": "The hidden hand of God: Angels at work", "person": "Bro. Stephen Whitehouse", "sortOrder": 2 },
+            { "id": "i0810-10", "label": "Hymn", "detail": "410, then Closing Prayer", "person": "Bro. Trevan Orsetti", "sortOrder": 3 } ] },
+        { "id": "e0810-2030", "startTime": "20:30", "label": "Bonus Class", "title": "All of Bible Prophecy on one Powerpoint Slide", "speaker": "Bro. Nathan Lewis", "category": "class", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0810-2100", "startTime": "21:00", "title": "Teen Activities — Engineering Night", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 16 },
+        { "id": "e0810-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 17 },
+        { "id": "e0810-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 18 }
+      ]
+    },
+
+    {
+      "id": "d0811", "date": "2026-08-11", "label": "Tuesday",
+      "creditBlocks": [ { "id": "cb0811", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Daniel Bleichner AM / Bro. Tom Lampi PM",    "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Sis. Sarah Osborn AM / Sis. Martha Robinson PM",  "sortOrder": 1 } ] } ],
+      "groups": [ { "id": "g0811", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ],
+      "events": [
+        { "id": "e0811-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0811-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0811-1", "label": "Hymn", "detail": "355, then Prayer", "sortOrder": 0 },
+            { "id": "i0811-2", "label": "Reading", "detail": "2 Kings 9v30-37", "person": "Bro. Jonah Walding", "sortOrder": 1 },
+            { "id": "i0811-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0811-0830", "startTime": "08:30", "label": "Class 3", "title": "THE EUNUCHS - The Dogs of Jezreel", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0811-0925", "startTime": "09:25", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0811-0950", "startTime": "09:50", "label": "Class 3", "title": "Doctrine and Fellowship", "speaker": "Bro. Ted Hodge", "seriesId": "s-hodge", "category": "class", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0811-1045", "startTime": "10:45", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 5 },
+        { "id": "e0811-1115", "startTime": "11:15", "label": "Class 3", "title": "The cry within the walls", "speaker": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "category": "class", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0811-4", "label": "Hymn", "detail": "372, then Closing Prayer", "person": "Bro. Mark Bittinger", "sortOrder": 0 } ] },
+        { "id": "e0811-1230", "startTime": "12:30", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 7,
+          "items": [ { "id": "i0811-5", "label": "Thanks", "person": "Bro. Chris Ditto", "sortOrder": 0 } ] },
+        { "id": "e0811-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0811-1345", "startTime": "13:45", "title": "Activities — Cherubim Challenge", "description": "All Ages!", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0811-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 10 },
+        { "id": "e0811-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0811", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0811-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0811", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0811-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 12,
+          "items": [ { "id": "i0811-6", "label": "Thanks", "person": "Bro. James Larsen", "sortOrder": 0 } ] },
+        { "id": "e0811-1900", "startTime": "19:00", "title": "Evening Program", "category": "worship", "notifiable": true, "sortOrder": 13,
+          "items": [
+            { "id": "i0811-7",  "label": "Hymn", "detail": "404, then Prayer", "sortOrder": 0 },
+            { "id": "i0811-8",  "label": "Reading", "detail": "Matthew 2", "person": "Bro. Marcus Winter", "sortOrder": 1 },
+            { "id": "i0811-9",  "label": "Class", "detail": "Behold the Man", "person": "Bro. Nathan Lewis", "sortOrder": 2 },
+            { "id": "i0811-10", "label": "Hymn", "detail": "290, then Closing Prayer", "person": "Bro. Dan Sargent", "sortOrder": 3 } ] },
+        { "id": "e0811-2030", "startTime": "20:30", "label": "Bonus Class", "title": "Bill C-9, the Combatting Hate Act and Christadelphians", "speaker": "Bro. Ted Hodge", "category": "class", "notifiable": true, "sortOrder": 14 },
+        { "id": "e0811-2100", "startTime": "21:00", "title": "Teen Activities — Film Festival", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0811-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 16 },
+        { "id": "e0811-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 17 }
+      ]
+    },
+
+    {
+      "id": "d0812", "date": "2026-08-12", "label": "Wednesday",
+      "creditBlocks": [ { "id": "cb0812", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Dan Robinson AM / Bro. Mike McStravick PM", "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Bro. Darrel Wiens AM / Sis. Eliyah Jones PM",    "sortOrder": 1 } ] } ],
+      "groups": [ { "id": "g0812", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ],
+      "events": [
+        { "id": "e0812-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0812-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0812-1", "label": "Hymn", "detail": "290, then Prayer", "sortOrder": 0 },
+            { "id": "i0812-2", "label": "Reading", "detail": "2 Kings 10v1-14", "person": "Bro. Levi Ditto", "sortOrder": 1 },
+            { "id": "i0812-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0812-0830", "startTime": "08:30", "label": "Class 4", "title": "THE BASKETS - The Heaps of Heads", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0812-0925", "startTime": "09:25", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0812-0950", "startTime": "09:50", "label": "Class 4", "title": "Idolatry and Leadership", "speaker": "Bro. Ted Hodge", "seriesId": "s-hodge", "category": "class", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0812-1045", "startTime": "10:45", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 5 },
+        { "id": "e0812-1115", "startTime": "11:15", "label": "Class 4", "title": "Guard the gates", "speaker": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "category": "class", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0812-4", "label": "Hymn", "detail": "298, then Closing Prayer", "person": "Bro. Jimmy Glover", "sortOrder": 0 } ] },
+        { "id": "e0812-1230", "startTime": "12:30", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 7,
+          "items": [ { "id": "i0812-5", "label": "Thanks", "person": "Bro. Josh Pipe", "sortOrder": 0 } ] },
+        { "id": "e0812-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0812-1400", "startTime": "14:00", "title": "Activities", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0812-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 10 },
+        { "id": "e0812-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0812", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0812-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0812", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0812-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 12,
+          "items": [ { "id": "i0812-6", "label": "Thanks", "person": "Bro. Colton Wiens", "sortOrder": 0 } ] },
+        { "id": "e0812-1900", "startTime": "19:00", "title": "Evening Program", "category": "worship", "notifiable": true, "sortOrder": 13,
+          "items": [
+            { "id": "i0812-7",  "label": "Hymn", "detail": "17, then Prayer", "sortOrder": 0 },
+            { "id": "i0812-8",  "label": "Reading", "detail": "Matthew 2", "person": "Bro. Mark Macfarlane", "sortOrder": 1 },
+            { "id": "i0812-9",  "label": "Class", "detail": "Bring them up in the nurture and admonition of the Lord", "person": "Bro. Ted Hodge", "sortOrder": 2 },
+            { "id": "i0812-10", "label": "Hymn", "detail": "213, then Closing Prayer", "person": "Bro. Graeme Osborn", "sortOrder": 3 } ] },
+        { "id": "e0812-2030", "startTime": "20:30", "label": "Bonus Class", "title": "The Appointed Day: When We All Stand Before Christ", "speaker": "Bro. Stephen Whitehouse", "category": "class", "notifiable": true, "sortOrder": 14 },
+        { "id": "e0812-2100", "startTime": "21:00", "title": "Teen Activities — Arts & Crafts", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0812-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 16 },
+        { "id": "e0812-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 17 }
+      ]
+    },
+
+    {
+      "id": "d0813", "date": "2026-08-13", "label": "Thursday",
+      "creditBlocks": [ { "id": "cb0813", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Luke Colby AM / Bro. Stephen Macfarlane PM",   "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Sis. Ashley Robinson AM / Bro. Nathanael Massey PM", "sortOrder": 1 } ] } ],
+      "groups": [ { "id": "g0813", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ],
+      "events": [
+        { "id": "e0813-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0813-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0813-1", "label": "Hymn", "detail": "309, then Prayer", "sortOrder": 0 },
+            { "id": "i0813-2", "label": "Reading", "detail": "2 Kings 10v15-28", "person": "Bro. Zadok Montgomery", "sortOrder": 1 },
+            { "id": "i0813-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0813-0830", "startTime": "08:30", "label": "Class 5", "title": "THE VESTMENTS - The Sacrifice of Baal", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0813-0925", "startTime": "09:25", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0813-0950", "startTime": "09:50", "label": "Class 5", "title": "Pleasure and Riches", "speaker": "Bro. Ted Hodge", "seriesId": "s-hodge", "category": "class", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0813-1045", "startTime": "10:45", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 5 },
+        { "id": "e0813-1115", "startTime": "11:15", "label": "Class 5", "title": "March around the walls", "speaker": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "category": "class", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0813-4", "label": "Hymn", "detail": "280, then Closing Prayer", "person": "Bro. Stephen Bartholomew", "sortOrder": 0 } ] },
+        { "id": "e0813-1230", "startTime": "12:30", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 7,
+          "items": [ { "id": "i0813-5", "label": "Thanks", "person": "Bro. Rafeek Soolaman", "sortOrder": 0 } ] },
+        { "id": "e0813-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0813-1400", "startTime": "14:00", "title": "Activities", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0813-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 10 },
+        { "id": "e0813-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0813", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0813-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0813", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0813-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 12,
+          "items": [ { "id": "i0813-6", "label": "Thanks", "person": "Bro. Jon Fletcher", "sortOrder": 0 } ] },
+        { "id": "e0813-1900", "startTime": "19:00", "title": "Evening Program", "category": "worship", "notifiable": true, "sortOrder": 13,
+          "items": [
+            { "id": "i0813-7", "label": "Hymn", "detail": "46, then Prayer", "sortOrder": 0 },
+            { "id": "i0813-8", "label": "Class", "detail": "Drama: Holpen With a Little Help: The Inter-Testament Maccabees", "sortOrder": 1 },
+            { "id": "i0813-9", "label": "Closing Prayer", "person": "Bro. Dan Sargent", "sortOrder": 2 } ] },
+        { "id": "e0813-2030", "startTime": "20:30", "title": "Ice-Cream Social", "category": "recreation", "notifiable": true, "sortOrder": 14 },
+        { "id": "e0813-2100", "startTime": "21:00", "title": "Teen Activities — The Chaos Course", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0813-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 16 },
+        { "id": "e0813-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 17 }
+      ]
+    },
+
+    {
+      "id": "d0814", "date": "2026-08-14", "label": "Friday",
+      "creditBlocks": [ { "id": "cb0814", "sortOrder": 0, "credits": [
+        { "role": "Presider", "value": "Bro. Shawn Snobelen AM / Bro. Tim Styles PM",     "sortOrder": 0 },
+        { "role": "Pianist",  "value": "Bro. Darrel Wiens AM / Sis. Carmel Robinson PM",  "sortOrder": 1 } ] } ],
+      "groups": [ { "id": "g0814", "title": "Choir / Drama", "startTime": "16:00", "sortOrder": 0 } ],
+      "events": [
+        { "id": "e0814-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0814-0815", "startTime": "08:15", "title": "Morning Assembly", "category": "worship", "notifiable": true, "sortOrder": 1,
+          "items": [
+            { "id": "i0814-1", "label": "Hymn", "detail": "198, then Prayer", "sortOrder": 0 },
+            { "id": "i0814-2", "label": "Reading", "detail": "2 Kings 10v29-36", "person": "Bro. Les Winter", "sortOrder": 1 },
+            { "id": "i0814-3", "detail": "Announcements", "sortOrder": 2 } ] },
+        { "id": "e0814-0830", "startTime": "08:30", "label": "Class 6", "title": "THE CALVES - The Legacy of Jeroboam", "speaker": "Bro. Nathan Lewis", "seriesId": "s-lewis", "category": "class", "notifiable": true, "sortOrder": 2 },
+        { "id": "e0814-0925", "startTime": "09:25", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 3 },
+        { "id": "e0814-0950", "startTime": "09:50", "label": "Class 6", "title": "One more place", "speaker": "Bro. Ted Hodge", "seriesId": "s-hodge", "category": "class", "notifiable": true, "sortOrder": 4 },
+        { "id": "e0814-1045", "startTime": "10:45", "title": "Break", "category": "logistics", "notifiable": false, "sortOrder": 5 },
+        { "id": "e0814-1115", "startTime": "11:15", "label": "Class 6", "title": "Remember me, O my God", "speaker": "Bro. Stephen Whitehouse", "seriesId": "s-whitehouse", "category": "class", "notifiable": true, "sortOrder": 6,
+          "items": [ { "id": "i0814-4", "label": "Hymn", "detail": "61, then Closing Prayer", "person": "Bro. Toby Harper", "sortOrder": 0 } ] },
+        { "id": "e0814-1230", "startTime": "12:30", "title": "Lunch", "category": "meal", "notifiable": true, "sortOrder": 7,
+          "items": [ { "id": "i0814-5", "label": "Thanks", "person": "Bro. Jonathan Lawrence", "sortOrder": 0 } ] },
+        { "id": "e0814-1330", "startTime": "13:30", "title": "Children's Choir", "speaker": "Sis. Ruth Osborn", "audience": "Children", "category": "youth", "notifiable": true, "sortOrder": 8 },
+        { "id": "e0814-1400", "startTime": "14:00", "title": "Activities", "category": "recreation", "notifiable": true, "sortOrder": 9 },
+        { "id": "e0814-1500", "startTime": "15:00", "title": "Swimming", "category": "recreation", "notifiable": true, "sortOrder": 10 },
+        { "id": "e0814-1600a", "startTime": "16:00", "title": "Choir", "speaker": "Bro. Paul Osborn", "groupId": "g0814", "track": "Choir", "category": "youth", "notifiable": true, "sortOrder": 0 },
+        { "id": "e0814-1600b", "startTime": "16:00", "title": "Drama", "speaker": "Sis. Naomi Osborn", "groupId": "g0814", "track": "Drama", "category": "youth", "notifiable": true, "sortOrder": 1 },
+        { "id": "e0814-1730", "startTime": "17:30", "title": "Supper", "category": "meal", "notifiable": true, "sortOrder": 12,
+          "items": [ { "id": "i0814-6", "label": "Thanks", "person": "Bro. Gideon Osborn", "sortOrder": 0 } ] },
+        { "id": "e0814-1900", "startTime": "19:00", "title": "Evening Program", "category": "worship", "notifiable": true, "sortOrder": 13,
+          "items": [
+            { "id": "i0814-7", "label": "Hymn", "detail": "116, then Prayer", "sortOrder": 0 },
+            { "id": "i0814-8", "label": "Class", "detail": "Presentation Night: Children's Presentations followed by Cantata: \"Pour out your heart before Him\"", "sortOrder": 1 },
+            { "id": "i0814-9", "label": "Closing Prayer", "person": "Bro. John Pillion", "sortOrder": 2 } ] },
+        { "id": "e0814-2100", "startTime": "21:00", "title": "Teen Activities — Feast Night", "audience": "Teens", "category": "youth", "notifiable": true, "sortOrder": 14 },
+        { "id": "e0814-2200", "startTime": "22:00", "title": "Teen Devotional", "audience": "Teens", "category": "worship", "notifiable": true, "sortOrder": 15 },
+        { "id": "e0814-2230", "startTime": "22:30", "title": "Quiet", "category": "logistics", "notifiable": false, "sortOrder": 16 }
+      ]
+    },
+
+    {
+      "id": "d0815", "date": "2026-08-15", "label": "Saturday",
+      "creditBlocks": [],
+      "groups": [],
+      "events": [
+        { "id": "e0815-0700", "startTime": "07:00", "title": "Continental Breakfast", "category": "meal", "notifiable": true, "sortOrder": 0,
+          "items": [
+            { "id": "i0815-1", "label": "Camp Cleanup", "detail": "Camp Cleanup (All Hands!)", "sortOrder": 0 },
+            { "id": "i0815-2", "label": "Dismantle Tents", "sortOrder": 1 },
+            { "id": "i0815-3", "label": "Clean Cabins", "detail": "All cabins should be vacated by 11:00 a.m.", "sortOrder": 2 } ] },
+        { "id": "e0815-1000", "startTime": "10:00", "title": "Departure", "description": "Depart from camp. (No lunch will be provided).", "category": "logistics", "notifiable": true, "sortOrder": 1 }
+      ]
+    }
+  ]
+}
