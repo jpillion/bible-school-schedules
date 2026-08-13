@@ -4,8 +4,15 @@
  * background when there happens to be a connection.
  *
  * Bump CACHE when any precached file changes, or phones will keep the old copy forever.
+ *
+ * "Precached" undersells it. The fetch handler below is cache-first for EVERY same-origin GET and
+ * writes every successful response back, so index.html is cached at runtime even though it is not
+ * in ASSETS — and app.html registers this worker at directory scope, so the install page is
+ * governed by it for anyone who has ever tapped "Open the schedule". Changing index.html without
+ * bumping this constant therefore ships nothing to the people who already have the page. Treat any
+ * change under this directory as a reason to bump, not just changes to the ASSETS list.
  */
-const CACHE = 'cbssa-v1.0.0';
+const CACHE = 'cbssa-v1.1.0';
 const ASSETS = [
   './app.html',
   './engine.js',
