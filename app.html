@@ -202,7 +202,8 @@ function render() {
   if (!day) return;
 
   const nowMinute = E.minuteOfDayNow(school, now);
-  const isToday = todayDay && day.id === todayDay.id;
+  const relation = E.dayRelationOf(school, day, now);
+  const isToday = relation === 'today';
   const live = isToday && lifecycle === 'live' ? E.computeLiveState(day, nowMinute) : E.EMPTY_LIVE;
   const { header, sections } = E.buildSections(day);
 
@@ -215,7 +216,7 @@ function render() {
     } else if (section.type === 'credits') {
       main.append(creditsNode([section.block], true));
     } else {
-      const status = E.statusOf(live, section.block, nowMinute);
+      const status = E.statusOf(live, section.block, nowMinute, relation);
       const node = blockNode(section.block, status, live.minutesUntilUpNext);
       if (!firstHighlight && (status === 'inProgress' || status === 'upNext')) firstHighlight = node;
       main.append(node);

@@ -12,7 +12,7 @@
  * bumping this constant therefore ships nothing to the people who already have the page. Treat any
  * change under this directory as a reason to bump, not just changes to the ASSETS list.
  */
-const CACHE = 'cbssa-v1.1.0';
+const CACHE = 'cbssa-v1.1.1';
 const ASSETS = [
   './app.html',
   './engine.js',

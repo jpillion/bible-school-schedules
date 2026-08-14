@@ -191,7 +191,15 @@ export function computeLiveState(day, nowMinute) {
   };
 }
 
-export function statusOf(live, block, nowMinute) {
+/*
+ * The minute of day only means anything on the day being shown. On any other day the clock
+ * says nothing about whether a block has happened — the DATE does. Callers must pass the
+ * relation of the rendered day to today (`dayRelationOf`); without it a 2:00 pm reader sees
+ * yesterday's evening still "to come" and tomorrow's morning already greyed out.
+ */
+export function statusOf(live, block, nowMinute, relation) {
+  if (relation === 'past') return 'past';
+  if (relation === 'future') return 'future';
   if (live.inProgress.has(block.key)) return 'inProgress';
   if (block.key === live.upNextKey) return 'upNext';
   if (block.startMinute <= nowMinute) return 'past';
@@ -243,6 +251,15 @@ export function todayOrdinal(school, at = new Date()) {
 export function minuteOfDayNow(school, at = new Date()) {
   const p = schoolParts(school, at);
   return p.hour * 60 + p.minute;
+}
+
+/** Where a day sits relative to today at the school: 'past', 'today' or 'future'. */
+export function dayRelationOf(school, day, at = new Date()) {
+  const d = isoDateOrdinal(day.date);
+  const today = todayOrdinal(school, at);
+  if (d < today) return 'past';
+  if (d > today) return 'future';
+  return 'today';
 }
 
 export function lifecycleOf(school, at = new Date()) {
