@@ -26,29 +26,56 @@
 <div class="wrap">
 
 <h1>Privacy Policy</h1>
-<p class="meta">Bible School Schedules (CBSSA) · Last updated 12 August 2026</p>
+<p class="meta">Bible School Schedules (CBSSA) · Last updated 17 October 2026</p>
 
-<p class="strong-note">This app collects no personal information of any kind. It has no
-accounts, no analytics, no advertising, and it makes no network requests.</p>
+<p class="strong-note">This app does not collect your name, email address, or any other
+personal detail. It has no analytics, no advertising, no crash reporting, and no tracking.</p>
 
-<h2>What the app stores</h2>
-<p>Everything the app needs is included in the app itself when you install it:</p>
+<p>To get your school's schedule onto your phone, the app does talk to a server, run on
+Google Firebase. This page says exactly what that involves.</p>
+
+<h2>What is sent, and why</h2>
 <ul>
-  <li><strong>The Bible School schedule.</strong> Bundled with the app. It is not downloaded
-    and not fetched from a server.</li>
-  <li><strong>Your two settings</strong> — whether reminders are switched on, and how many
-    minutes' notice you want. These are saved on your own device only.</li>
+  <li><strong>An anonymous app identifier.</strong> The first time the app connects, Firebase
+    Authentication gives this copy of the app a random identifier. It is not tied to your name,
+    email, phone number or any account — it exists only so the server can remember which
+    schedules this copy of the app has been given access to.</li>
+  <li><strong>The access code you type.</strong> When you enter your school's access code, it
+    is sent to the server to be checked. If it is right, the server records that this anonymous
+    identifier may read that school's schedule. Codes are not stored with the identifier.</li>
+  <li><strong>Your school's schedule.</strong> The app then downloads the schedule and keeps a
+    copy on your phone, so it works with no signal and updates when the school publishes a
+    change.</li>
 </ul>
-<p>Nothing in that list is transmitted anywhere, because the app does not contain any code
-that sends data off the device.</p>
+
+<h2>What the server keeps</h2>
+<ul>
+  <li>Which anonymous identifiers have access to which schools.</li>
+  <li>To slow down anyone guessing codes, a count of recent wrong attempts — per anonymous
+    identifier, and per network address stored only as a scrambled (keyed hash) value, never the
+    address itself. These counters delete themselves after seven days.</li>
+  <li>Like any internet service, Google's servers may record the network (IP) address of a
+    request in their own logs. That is covered by
+    <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security
+    terms</a>.</li>
+</ul>
+
+<h2>What stays on your phone</h2>
+<ul>
+  <li>The schedules you have added.</li>
+  <li>Your settings — whether reminders are switched on, and how many minutes' notice you
+    want.</li>
+</ul>
+<p>Deleting the app deletes all of this from your phone. The server then holds only an
+anonymous identifier that nothing links to you; if you would like it removed anyway, email the
+address below.</p>
 
 <h2>What the app does not do</h2>
 <ul>
   <li>It does not ask for your name, email address, or any other personal detail.</li>
-  <li>It does not create an account or require a sign-in.</li>
   <li>It does not use analytics, crash reporting, or any advertising or tracking service.</li>
   <li>It does not request your location, contacts, photos, microphone, or camera.</li>
-  <li>It does not share or sell any data, because it holds none to share.</li>
+  <li>It does not share or sell any data.</li>
 </ul>
 
 <h2>Notifications</h2>
@@ -67,19 +94,19 @@ used — which is why reminders keep working when there is no signal at the camp
 </ul>
 
 <h2>The Home Screen web version</h2>
-<p>The web version at this site behaves the same way. It stores the schedule in your browser's
+<p>The web version at this site does not connect to the server described above. It stores the schedule in your browser's
 cache so it works offline, sets no cookies, and sends nothing anywhere. This site is hosted on
 GitHub Pages; as with any web host, GitHub may keep its own server logs of requests, which is
 outside our control and covered by
 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
 
 <h2>Children</h2>
-<p>The app is a personal schedule and reminder tool. It is not directed at children, and since
-it collects no information at all, it collects none from children either.</p>
+<p>The app is a personal schedule and reminder tool. It is not directed at children, and it
+collects no personal information from anyone, children included.</p>
 
 <h2>Changes</h2>
 <p>If this policy ever changes, the revised version will be posted on this page with a new date
-above. Given that the app collects nothing, material change is unlikely.</p>
+above.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:jjpillion@gmail.com">jjpillion@gmail.com</a></p>
